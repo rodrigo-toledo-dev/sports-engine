@@ -1,0 +1,4 @@
+LOCAL_DB_USERNAME: postgres
+LOCAL_DB_PASSWORD: postgres
+LOCAL_DB_DEVELOPMENT: sport_engine_development
+LOCAL_DB_TEST: sport_engine_test

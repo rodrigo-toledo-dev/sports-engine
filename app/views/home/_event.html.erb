@@ -1,0 +1,24 @@
+<div class="box">
+    <%= event_group[:date] %>
+    <h3>Events in 01-06-2020</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Sport Category</th>
+                <th>Title</th>
+                <th>Team Names</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <% event_group[:events].each do |event| %>
+            <tr>
+                <td><%=event.category.name%></td>
+                <td><%=event.title%></td>
+                <td><%=events.teams.to_sentence%></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+<hr />
