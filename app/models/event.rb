@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :event_category
-  # validates_with TeamValidator
+  validates_with TeamValidator
 
   def self.filter_by_categories(ids = [])
     events = Event.unscoped
