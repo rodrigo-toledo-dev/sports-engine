@@ -47,6 +47,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard'
+  gem 'guard-bundler', require: false
+  gem 'guard-minitest'
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 
 group :test do
@@ -55,8 +59,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'simplecov'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'figaro'
+gem 'rails_admin', '~> 2.0'
