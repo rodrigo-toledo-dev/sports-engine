@@ -1,0 +1,12 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f| %>
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+  <%= resource.errors.full_messages.to_sentence %>
+
+  <%= f.label :email, class: 'sr-only' %>
+  <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", placeholder: 'Email address', class: 'form-control' %>
+  
+  <%= f.label :password, class: 'sr-only' %>
+  <%= f.password_field :password, required: true, autocomplete: "current-password", placeholder: 'Password', class: 'form-control' %>
+  <%= f.submit "Sign in", class: 'btn btn-lg btn-primary btn-block' %>
+<% end %>
