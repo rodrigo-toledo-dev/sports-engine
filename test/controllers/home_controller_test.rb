@@ -6,4 +6,8 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test 'should filter events by sport categories' do
+    get root_url
+  end
+
 end

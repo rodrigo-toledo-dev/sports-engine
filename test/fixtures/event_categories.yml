@@ -1,7 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+presentation:
+  name: Presentation of event
 
-two:
-  name: MyString
+football:
+  name: champions league of Football
+
+basketball:
+  name: champions league of Basketball
+
+tenis:
+  name: champions league of Tenis
+
+golf:
+  name: champions league of Golf

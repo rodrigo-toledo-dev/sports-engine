@@ -1,13 +1,24 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  event_category: one
-  title: MyString
-  teams: MyString
+presentation_event:
+  event_category: presentation
+  title: Presentation of event and teams
+  event_date: '2020-01-01'
 
-two:
-  user: two
-  event_category: two
-  title: MyString
-  teams: MyString
+first_game:
+  event_category: football
+  title: First Game
+  teams: Brazil || Argentina
+  event_date: '2020-01-02'
+
+second_game:
+  event_category: football
+  title: First Game
+  teams: Paraguai || Mexico
+  event_date: '2020-01-02'
+
+decision:
+  event_category: football
+  title: Final Game
+  teams: Brazil || USA
+  event_date: '2020-06-01'
