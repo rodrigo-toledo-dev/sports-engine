@@ -17,16 +17,12 @@ ActiveRecord::Schema.define(version: 2020_01_31_172618) do
 
   create_table "event_categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
     t.bigint "event_category_id"
     t.string "title"
     t.string "teams"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.date "event_date"
     t.index ["event_category_id"], name: "index_events_on_event_category_id"
   end
@@ -37,8 +33,6 @@ ActiveRecord::Schema.define(version: 2020_01_31_172618) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
