@@ -25,6 +25,24 @@ class EventTest < ActiveSupport::TestCase
     assert event.invalid?
   end
 
+  test 'should be invalid  with invalid starts sentence' do
+    event = events(:presentation_event)
+    event.teams = '|| Brazil'
+    assert event.invalid?
+  end
+
+  test 'should be invalid with invalid ends sentence' do
+    event = events(:presentation_event)
+    event.teams = 'Brazil ||'
+    assert event.invalid?
+  end
+
+  test 'should be invalid with trying bug sentence' do
+    event = events(:presentation_event)
+    event.teams = ' || '
+    assert event.invalid?
+  end
+
   test 'should have just 2 teams' do
     event = events(:presentation_event)
     event.teams = 'Brazil || Argentina || Paraguai'
