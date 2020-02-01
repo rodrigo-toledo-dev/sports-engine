@@ -26,7 +26,7 @@ After that access **http://localhost:3000**
 
 The backend was created using rails admin, it's flexible and have lot of extension. To access first you need run seeds (read the file first):
 
-```rails db:seed```
+```rails db:drop db:create db:migrate db:seed```
 
 Run the server with
 
