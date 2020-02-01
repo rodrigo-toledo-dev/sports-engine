@@ -1,40 +1,34 @@
-<div class="container">
-    <div class="row box">
-        <div class="col-md-12">
-            <h3>Filter by Sports Category</h3>
-            <span>Select Sport Categories above you will be get results that you want to see</span>
-            <hr />
-            <form class="form-inline" role="form">
-                <div class="form-group">
-                    <label class="filter-col" for="pref-orderby">Categories:</label><br />
-                    <select id="pref-perpage" class="form-control" multiple="true">
-          <option value="2">Basketball</option>
-          <option value="3">Football</option>
-          <option value="4">Golf</option>
-          <option value="5">Tenis</option>
-        </select>
-                </div>
-                <!-- form group [rows] -->
-                <div class="form-group form-group-filter">
-                    <button class="btn btn-secondary btn-filter">
-                      Filter Results
-                    </button>
-                </div>
-                
-            </form>
+<div class="container-fluid">
+  <div class="row box">
+    <div class="col-md-12">
+      <h3>Filter by Sports Category</h3>
+      <span>Select Sport Categories above you will be get results that you want to see</span>
+      <hr />
+      <%= form_tag home_path, class: 'form-inline', role: 'form' do |f| %>
+        <div class="form-group">
+          <%= select_tag :event_category_ids, options_from_collection_for_select(EventCategory.order(:name).all, "id", "name"), multiple: true %>
         </div>
-    </div>
-    <div class="row box">
-        <div class="col-md-12">
-            <h4>Results</h4>
-            <hr />  
-            <% if @events_group.empty? %>
-              <h3>0 results founded</h3>
-            <% else %>
-              <% @events_group.each do |event_group| %>
-                <%= render 'event', locals: {event_group: event_group}%>
-              <% end %>
-            <% end %>
+        <!-- form group [rows] -->
+        <div class="form-group form-group-filter">
+          <button class="btn btn-secondary btn-filter">
+            Filter Results
+          </button>
         </div>
+      
+      <% end %>
     </div>
+  </div>
+  <div class="row box">
+    <div class="col-md-12">
+      <h4>Results</h4>
+      <hr />  
+      <% if @events_group.empty? %>
+        <h3>0 results founded</h3>
+      <% else %>
+        <% @events_group.each do |event_group| %>
+          <%= render partial: 'event', locals: {event_group: event_group}%>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -1,6 +1,9 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    padding: 2em;
+}
 .box {
     border-radius: 1em;
     border-style: dashed;
@@ -8,7 +11,7 @@
     margin-bottom: 1em;
 }
 
-#pref-perpage,
+select,
 .btn-filter {
     height: 100px
 }
