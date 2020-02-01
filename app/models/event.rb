@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :event_category
   validates_with TeamValidator
+  validates :title, :event_date, presence: true
 
   def self.filter_by_categories(event_categories_ids = [])
     events = Event.order(:event_date)
